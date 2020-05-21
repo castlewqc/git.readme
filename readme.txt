@@ -16,3 +16,13 @@ git status 查看修改内容
 生成ssh  ssh-keygen -t rsa
 查看 cat ~/.ssh/id_rsa cat ~/.ssh/id_rsa_pub 文件在user/.ssh/ 目录下
 
+记住密码
+touch .git-credentials
+https://username:password@github.com
+git config --global credential.helper store
+git config –global credential.helper cache
+git config credential.helper ‘cache –timeout=3600’
+
+清除缓存
+git rm -r --cached .
+
